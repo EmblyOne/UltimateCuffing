@@ -18,6 +18,7 @@ namespace UltimateCuffing
 
         public override void OnEnabled()
         {  
+            if(!Config.IsEnabled) return;
             EventHandler = new EventHandlers(this);
             Player.Handcuffing += EventHandler.OnCuff;
 
